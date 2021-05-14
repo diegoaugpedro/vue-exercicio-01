@@ -1,22 +1,34 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header msg= "Framework Front End - Vue"/>
+    <Topic />
+    <SearchBar />
+    <NavBar />
+    <SideBarImages />
+    <Article />
+    <SideBarSection />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue'
+import Topic from './components/Topic.vue'
+import SearchBar from './components/SearchBar.vue'
+import NavBar from './components/NavBar.vue'
+import SideBarImages from './components/SideBarImages.vue'
+import Article from './components/Article.vue'
+import SideBarSection from './components/SideBarSection.vue'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header, Topic, NavBar, SideBarImages, Article, SideBarSection, SearchBar
   }
 }
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
