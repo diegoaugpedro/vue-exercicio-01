@@ -1,23 +1,25 @@
 <template>
-    <div class="section">
-      <ul>
-        <li v-for="image in images" :key="image">
-          {{ image.images }}
-        </li>
-      </ul>
-    </div>
+  <div class="section">
+    <ul>
+      <li v-for="image in images" :key="image">
+        {{ images.image }}
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'SideBarImages',
+  name: "SideBarImages",
   data() {
-      return {
-      images:[
-        {images: 'IMAGEM 1'},
-        {images: 'IMAGEM 2'},
-        {images: 'IMAGEM 3'}
-      ]}
-    }
-  }
+    return {
+      images: [
+        { image: "IMAGEM 1" },
+        { image: "IMAGEM 2" },
+        { image: "IMAGEM 3" },
+        { image: "IMAGEM 4" },
+      ],
+    };
+  },
+};
 </script>

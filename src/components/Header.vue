@@ -4,7 +4,7 @@
       <img alt="Vue logo" src="../assets/logo.png" />
     </div>
     <div class="header">
-      <h1>{{ msg }}</h1>
+      <h1>{{ initialMsg }}</h1>
     </div>
   </div>
 </template>
@@ -12,8 +12,10 @@
 <script>
 export default {
   name: "Header",
-  props: {
-    msg: String,
+  data() {
+    return {
+      initialMsg: "Bem vindo ao Vue!",  
+    };
   },
 };
 </script>

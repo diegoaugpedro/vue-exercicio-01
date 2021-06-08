@@ -1,8 +1,7 @@
 <template>
   <div class="searchbar">
-    <form>
-        <input type="search" placeholder="Pesquisar sobre..." />
-        <input type="button" value="Pesquisar">
+    <form v-for="form in forms" :key="form">
+      {{ forms.inputs }}
     </form>
   </div>
 </template>
@@ -10,8 +9,13 @@
 <script>
 export default {
   name: "SearchBar",
-  props: {
-    msg: String,
+  data() {
+    return {
+      forms: [
+        { inputs: <input type="search" placeholder="Pesquisar sobre..." /> },
+        { inputs: <input type="button" value="Pesquisar" /> },
+      ],
+    };
   },
 };
 </script>
