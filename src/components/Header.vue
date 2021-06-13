@@ -1,10 +1,14 @@
 <template>
   <div>
-    <div id="logo">
-      <img alt="Vue logo" src="../assets/logo.png" />
-    </div>
     <div class="header">
       <h1>{{ initialMsg }}</h1>
+      <h2>
+        {{ topics }}
+      </h2>
+      <form action="searchbar">
+        <input type="search" placeholder="Pesquisar sobre..." />
+        <input type="button" value="Pesquisar" />
+      </form>
     </div>
   </div>
 </template>
@@ -14,7 +18,8 @@ export default {
   name: "Header",
   data() {
     return {
-      initialMsg: "Bem vindo ao Vue!",  
+      initialMsg: "Bem vindo ao Vue!",
+      topics: "Topic 1 Topic 2 Topic 3 Topic 4",
     };
   },
 };

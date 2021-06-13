@@ -1,34 +1,41 @@
 <template>
   <div id="app">
     <Header />
-    <Article :articles="articles" />
-    <Topic :topics="topics" />
-    <SearchBar />
+    <Article />
     <NavBar />
-    <SideBarImages />
     <SideBarSection />
+    <SideBarImages />
+    <tr class="imageItems" v-for="img in imageItems" :key="img">
+      <td>
+        <img :src=imageItems />
+      </td>
+    </tr>
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
 import Article from "./components/Article.vue";
-import Topic from "./components/Topic.vue";
-//import SearchBar from "./components/SearchBar.vue";
-//import NavBar from "./components/NavBar.vue";
+import NavBar from "./components/NavBar.vue";
+import SideBarSection from "./components/SideBarSection.vue";
 //import SideBarImages from "./components/SideBarImages.vue";
-//import SideBarSection from "./components/SideBarSection.vue";
+import Batman from "./images/B1.png";
+import Superman from "./images/S1.png";
+import MulherMaravilha from "./images/M1.jpg";
 
 export default {
   name: "App",
   components: {
     Header,
     Article,
-    Topic,
-    //NavBar,
+    NavBar,
+    SideBarSection,
     //SideBarImages,
-    //SideBarSection,
-    //SearchBar,
+  },
+  data() {
+    return {
+      imageItems: [{ src: Batman }, { src: Superman }, { src: MulherMaravilha }],
+    };
   },
 };
 </script>
